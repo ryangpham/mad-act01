@@ -118,9 +118,47 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
                 ]
             ),)
           ),
-            Center(
-              child: Text('Tab'),
+          // tab 2
+          Container(
+            color: Colors.lightBlue.shade50,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Name",
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Email",
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                    SizedBox(height: 24),
+                    // network image
+                    Image.network(
+                      "https://picsum.photos/150",
+                      width: 150,
+                      height: 150,
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
+              ),
             ),
+          ),
+          Center(
+            child: Text('Tab 3'),
+          ),
+          Center(
+            child: Text('Tab 4'),
+          ),
         ],
       ),
       bottomNavigationBar: BottomAppBar(
