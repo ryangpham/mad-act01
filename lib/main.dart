@@ -153,8 +153,23 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
               ),
             ),
           ),
-          Center(
-            child: Text('Tab 3'),
+          // tab 3
+          Container(
+            color: Colors.green.shade50,
+            child: Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("Button pressed in Tab 3!"),
+                      duration: Duration(seconds: 2),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
+                },
+                child: Text("Click me"),
+              ),
+            ),
           ),
           Center(
             child: Text('Tab 4'),
