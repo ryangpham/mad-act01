@@ -171,8 +171,45 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
               ),
             ),
           ),
-          Center(
-            child: Text('Tab 4'),
+          // tab 4
+          Container(
+            color: Colors.purple.shade50,
+            child: ListView.builder(
+              padding: EdgeInsets.all(12),
+              itemCount: 15,
+              itemBuilder: (context, index) {
+                return Card(
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  margin: EdgeInsets.symmetric(vertical: 8),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: Colors.purple,
+                      child: Text(
+                        '${index + 1}',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    title: Text(
+                      'Item ${index + 1}',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text("Details for item ${index + 1} go here."),
+                    trailing: Icon(Icons.arrow_forward_ios, size: 16),
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Tapped on Item ${index + 1}"),
+                          duration: Duration(seconds: 1),
+                        ),
+                      );
+                    },
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
