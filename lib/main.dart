@@ -222,7 +222,7 @@ class __TabsNonScrollableDemoState extends State<_TabsNonScrollableDemo>
           ),
           child: Row(
             children: [
-              Icon(Icons.home, color: Colors.blueAccent),
+              Icon(Icons.home, color: Colors.amber.shade100),
               SizedBox(width: 12),
               Text("Bottom App Bar", style: TextStyle(fontWeight: FontWeight.bold))
             ]
